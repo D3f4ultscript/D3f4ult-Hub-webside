@@ -1,0 +1,299 @@
+:root {
+    --primary-color: #7a4dff;
+    --primary-hover: #6a39cc;
+    --background-dark: #1a1a1a;
+    --background-light: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #ddd;
+    --text-muted: #bbb;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.top-bar {
+    background-color: var(--background-light);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+}
+
+.tab {
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    transition: var(--transition);
+    font-size: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab:hover {
+    color: var(--primary-color);
+    background-color: rgba(122, 77, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.tab i {
+    font-size: 1.2rem;
+}
+
+.tab-content {
+    display: none;
+    padding: 6rem 2rem 2rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+#discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+#discord-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.home-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.home-box {
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.home-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.home-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.home-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#description {
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+}
+
+.description-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.description-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+#script-text {
+    width: 100%;
+    height: 120px;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--background-dark);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+#copy-btn, #get-key-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+#copy-btn:hover, #get-key-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+#get-key-info {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#notice-box {
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#key-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#key-popup input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--background-dark);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tab {
+        width: 100%;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .home-boxes {
+        grid-template-columns: 1fr;
+    }
+} 
