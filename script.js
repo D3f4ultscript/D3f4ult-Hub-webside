@@ -117,4 +117,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+document.getElementById('get-key-tab').addEventListener('click', function(e) {
+    e.preventDefault();
+    showNewsPopup();
+});
+
+function showNewsPopup() {
+    document.getElementById('news-popup').style.display = 'block';
+}
+
+function closeNewsPopup() {
+    document.getElementById('news-popup').style.display = 'none';
+}
+// Prevent tab switching for the disabled tab
+document.querySelector('.tabs').addEventListener('click', function(e) {
+    if (e.target.closest('#get-key-tab')) {
+        e.preventDefault();
+        e.stopPropagation();
+        showNewsPopup();
+    }
 }); 

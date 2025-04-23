@@ -11,13 +11,13 @@
     <div class="top-bar">
         <div class="tabs">
             <div class="tab" id="home-tab">
-                <i class="fas fa-home"></i> Home
+                <i class="fas fa-home"></i> <span>Home</span>
             </div>
             <div class="tab" id="scripts-tab">
-                <i class="fas fa-code"></i> Script
+                <i class="fas fa-code"></i> <span>Script</span>
             </div>
-            <div class="tab" id="get-key-tab">
-                <i class="fas fa-key"></i> Get Key
+            <div class="tab disabled" id="get-key-tab">
+                <i class="fas fa-key"></i> <span>Get Key</span>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <p>Join our Discord server to get more scripts!</p>
             
             <div id="description">
-                <h3>Supported Games [17]</h3>
+                <h3>Supported Games [18]</h3>
                 <ul class="description-list">
                     <li><i class="fas fa-gamepad"></i> Ninja Legends</li>
                     <li><i class="fas fa-gamepad"></i> Natural Disaster</li>
@@ -74,10 +74,11 @@
                     <li><i class="fas fa-gamepad"></i> Sword Fighters Simulator</li>
                     <li><i class="fas fa-gamepad"></i> Tap Topia Reborn</li>
 		    <li><i class="fas fa-gamepad"></i> Bubble Gum Simulator INFINITY</li>
+		    <li><i class="fas fa-gamepad"></i> Clicker Madness</li>
                 </ul>
                 <h3>Script:</h3>
                 <textarea id="script-text" readonly>
-loadstring(game:HttpGet("https://raw.githubusercontent.com/D3f4ultscript/Scripts-for-D3f4ult-Hub/refs/heads/main/D3f4ult%20Hub.lua"))()</textarea>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/D3f4ultscript/Scripts-for-D3f4ult-Hub/refs/heads/main/Hub.lua"))()</textarea>
                 <button id="copy-btn" onclick="copyScript()">
                     <i class="fas fa-copy"></i> Copy Script
                 </button>
@@ -94,6 +95,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/D3f4ultscript/Scripts
         <div class="account-notice">
             <i class="fas fa-info-circle"></i> Important: You need to be registered and logged in to access the key system. If you're not logged in, you won't be redirected to the key.
         </div>
+    </div>
+
+    <div id="news-popup" class="news-popup">
+        <h2>Big News🔥</h2>
+        <p>The key system has been completely removed.</p>
+        <button onclick="closeNewsPopup()">Close</button>
     </div>
 
     <div id="key-popup">
